@@ -3,6 +3,14 @@
   <h2><%= link_to picture.name, picture_path(picture) %></h2>
   <%= link_to "Edit #{picture.name}", edit_picture_path(picture) %>
   <%= link_to "Delete #{picture.name}", picture_path(picture), method: :delete %>
+  <%= link_to "Add a comment", new_picture_comment_path(picture)%>
+  <h3>Comments for <%= picture.name %></h3>
+    <% if picture.comments.any? %>
+      <% picture.comments.each do |comment| %>
+      <h3><%= comment.thoughts %></h3>
+      <% end %>
+    <% end %>
+<!--     Ask Spike. Wanted form from comments/new.html.erb to be here / couldnt -->
   <% end %>
 <% else %>
   No pictures yet!<br><br>
@@ -10,4 +18,5 @@
 
 <%= notice %>
 <%= yield %>
+<br><br>
 <a href='/pictures/new'>Add a picture</a>
