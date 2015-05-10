@@ -44,6 +44,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'paperclip'
   gem 'devise'
+  gem 'omniauth-facebook'
 end
 
 group :test do
