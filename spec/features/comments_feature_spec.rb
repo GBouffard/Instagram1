@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'writing comments' do
-  before{Picture.create name: 'photo'}
+  before { Picture.create name: 'photo' }
 
   scenario 'allows users to write comments on pictures' do
     visit '/pictures'
