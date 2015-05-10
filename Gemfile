@@ -43,6 +43,7 @@ group :development, :test do
   gem 'spring'
   gem 'shoulda'
   gem 'paperclip'
+  gem 'devise'
 end
 
 group :test do
