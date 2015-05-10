@@ -2,6 +2,9 @@ require 'rails_helper'
 
 feature 'liking pictures' do
   before { Picture.create name: 'photo' }
+  before do
+    signing_up_and_in
+  end
 
   scenario 'allows users to click likes pictures' do
     visit '/pictures'

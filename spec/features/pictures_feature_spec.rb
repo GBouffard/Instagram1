@@ -11,6 +11,9 @@ describe 'Instagram s main page' do
 
   feature 'pictures have been added' do
     let!(:photo) { Picture.create(name: 'photo') }
+  before do
+    signing_up_and_in
+  end
     # I wanted to do pic with url instead of a name at first.
     # didnt work. Need to ask Spike for advice.
     # body = [{

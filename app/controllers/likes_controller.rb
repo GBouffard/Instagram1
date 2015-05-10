@@ -1,10 +1,5 @@
 class LikesController < ApplicationController
-  # def create
-    # @picture = Picture.find(params[:picture])
-    # @picture.likes.create
-    # redirect_to pictures_path
-    # render json: {new_like_count: @post.likes.count}
-  # end
+  before_action :authenticate_user!
   def index
     redirect_to pictures_path
   end
