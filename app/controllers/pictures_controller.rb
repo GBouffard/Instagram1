@@ -1,6 +1,7 @@
 class PicturesController < ApplicationController
   def index
     @pictures = Picture.all
+    # render('layouts/application')
   end
 
   def new
@@ -36,4 +37,5 @@ class PicturesController < ApplicationController
     flash[:notice] = 'Picture deleted successfully'
     redirect_to '/pictures'
   end
+
 end

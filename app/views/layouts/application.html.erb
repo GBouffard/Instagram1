@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<center><B>Guillaume's awful version of </B><img src='https://ambiently.files.wordpress.com/2013/05/instagram-logo-small1.jpg?w=604'></center><br><br>
 <%= yield %>
-
 </body>
+<footer>
+<br><br>
+<% if user_signed_in? %>
+<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+<% else %>
+<%= link_to "Sign in", new_user_session_path %>
+<%= link_to "Sign up", new_user_registration_path %>
+<% end %>
+</footer>
 </html>
