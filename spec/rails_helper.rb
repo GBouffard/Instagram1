@@ -7,6 +7,9 @@ require 'capybara/rails'
 
 require 'helpers/users'
 include UserHelpers
+
+require 'helpers/comments'
+include CommentHelpers
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

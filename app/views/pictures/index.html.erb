@@ -13,6 +13,10 @@
     <% if picture.comments.any? %>
       <% picture.comments.each do |comment| %>
         <h3><%= comment.thoughts %></h3>
+      <br>
+<!--       These 2 are failing and I dont know why! Spike? Dan? Help! -->
+      <%= link_to "Edit Comment", edit_picture_comment(@picture, @comment) %>
+      <%= link_to "Delete Comment", picture_comments_path(@picture, @comment), method: :delete %>
       <% end %>
     <% end %>
 <!--     Ask Spike. I want to leave a comment on a picture without any page redirection / Tried for 2 hours. Didnt work -->
